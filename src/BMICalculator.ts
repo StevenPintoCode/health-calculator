@@ -6,8 +6,12 @@ export default class BMICalculator implements Calculator {
   height: number
 
   constructor(weight: number, height: number) {
-    this.weight = weight
-    this.height = height
+    if ( weight && height) {
+      this.weight = weight
+      this.height = height
+    }else{
+      throw Error("Invalid input arguments to BMI calculator.")
+    }
   }
 
   calculateOperation(): string {

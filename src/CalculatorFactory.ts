@@ -1,11 +1,15 @@
 import Calculator from "./Interfaces/Calculator";
 import BMRCalculator from "./BMRCalculator";
 import BMICalculator from "./BMICalculator";
+import BodyFatCalculator from "./BodyFatCalculator";
 export interface CalculatorParams {
   weight: number,
   height: number,
   age: number,
-  gender: string
+  gender: string,
+  hip?: number
+  waist?: number
+  neck?: number
 }
 
 export class CalculatorFactory {
@@ -15,7 +19,11 @@ export class CalculatorFactory {
     }else if(type === 'BMR'){
       return new BMRCalculator(calculatorParams.weight,calculatorParams.height, calculatorParams.age,
         calculatorParams.gender)
-    }else {
+    }else if(type === "BF"){
+      return new BodyFatCalculator(calculatorParams.gender, calculatorParams.waist, calculatorParams.neck,
+        calculatorParams.hip, calculatorParams.height)
+    }
+    else {
       throw new Error("No calculator available for that request")
     }
   }
