@@ -1,12 +1,12 @@
 import Calculator from "./Interfaces/Calculator";
-import BMRCalculator from "./BMRCalculator";
-import BMICalculator from "./BMICalculator";
-import BodyFatCalculator from "./BodyFatCalculator";
+import BMRCalculator from "./Classes/BMRCalculator";
+import BMICalculator from "./Classes/BMICalculator";
+import BodyFatCalculator from "./Classes/BodyFatCalculator";
 export interface CalculatorParams {
   weight: number,
   height: number,
-  age: number,
-  gender: string,
+  age?: number,
+  gender?: string,
   hip?: number
   waist?: number
   neck?: number

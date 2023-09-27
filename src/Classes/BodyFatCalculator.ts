@@ -1,14 +1,14 @@
-import Calculator from "./Interfaces/Calculator";
+import Calculator from "../Interfaces/Calculator";
 
 export default class BodyFatCalculator implements Calculator {
   type: string = "Body Fat"
-  gender: string
+  gender?: string
   waist: number | undefined
   neck: number | undefined
   hip: number | undefined
   height: number
 
-  constructor(gender: string, waist: number | undefined, neck: number | undefined, hip: number | undefined, height: number) {
+  constructor(gender: string | undefined, waist: number | undefined, neck: number | undefined, hip: number | undefined, height: number) {
     this.height = height
     this.hip = hip
     this.neck = neck

@@ -1,5 +1,5 @@
 import {CalculatorFactory, CalculatorParams} from "../src/CalculatorFactory";
-import BMICalculator from "../src/BMICalculator";
+import BMICalculator from "../src/Classes/BMICalculator";
 
 describe("Testing selection of Calculator creation", () => {
   test("Check if BMICalculator gets returned", () => {
