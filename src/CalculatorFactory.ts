@@ -1,6 +1,6 @@
 import Calculator from "./Interfaces/Calculator";
 import BMRCalculator from "./BMRCalculator";
-import BMICalculator from "./Interfaces/BMICalculator";
+import BMICalculator from "./BMICalculator";
 export interface CalculatorParams {
   weight: number,
   height: number,

@@ -1,4 +1,4 @@
-import Calculator from "./Calculator";
+import Calculator from "./Interfaces/Calculator";
 
 export default class BMICalculator implements Calculator {
   type = 'BMI'
