@@ -39,6 +39,7 @@ describe("Testing selection of Calculator creation", () => {
 
     expect(mutBMICalculator).toBeInstanceOf(BodyFatCalculator)
   })
+
   test('It fails with invalid params', () => {
     // @ts-expect-error
     const calculatorParam: CalculatorParams = {
@@ -52,5 +53,20 @@ describe("Testing selection of Calculator creation", () => {
     }
 
     expect(testCreationError).toThrow(new Error("Invalid input arguments to BMI calculator."))
+  })
+
+  test("Testing when invalid calculator is requested from the factory.", () => {
+    const calculatorParam: CalculatorParams = {
+      gender: 'male',
+      age: 20,
+      height: 100,
+      weight: 200
+    }
+
+    function testPoorCreation() {
+      const calculatorinstance = new CalculatorFactory().createCalculator("WRONG", calculatorParam)
+    }
+
+    expect(testPoorCreation).toThrow(new Error("No calculator available for that request"))
   })
 })
