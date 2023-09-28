@@ -1,10 +1,19 @@
 import BodyFatCalculator from "../src/Classes/BodyFatCalculator";
 
-const cases = [[40, 178, 50, 90, 62, 10.6], [40, 100, 50, 90, 62, 27.8]]
+const casesMale = [[40, 178, 50, 90, 62, 10.6], [40, 100, 50, 90, 62, 27.8]]
+const caseFemale = [[40, 178, 50, 90, 62, 4.1], [40, 100, 50, 90, 62, 28.4]]
 describe("Testing body fat calculator", () => {
-  test.each(cases)("Testing when age and gender is male, weight: %p kg, height: %p cm, neck: %p cm, waist %p cm, hip %p cm",
+  test.each(casesMale)("Testing when age is 25 and gender is male, weight: %p kg, height: %p cm, neck: %p cm, waist %p cm, hip %p cm",
     (first, second, third, fourth, fifth, expectedValue) => {
       const bodyFatCalc = new BodyFatCalculator("male", fourth, third, undefined, second)
+      const result = bodyFatCalc.calculateOperation()
+
+      expect(result).toBe(expectedValue.toString())
+    })
+
+  test.each(caseFemale)("Testing when age is 25 and gender is female, weight: %p kg, height: %p cm, neck: %p cm, waist %p cm, hip %p cm",
+    (first, second, third, fourth, fifth, expectedValue) => {
+      const bodyFatCalc = new BodyFatCalculator("female", fourth, third, fifth, second)
       const result = bodyFatCalc.calculateOperation()
 
       expect(result).toBe(expectedValue.toString())
