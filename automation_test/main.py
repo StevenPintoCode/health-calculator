@@ -23,14 +23,14 @@ class Test(unittest.TestCase):
     def test_loads_results_page(self):
         print("test_loads_results_page")
         driver = self.driver
-        driver.get(url + '/results')
+        driver.get(url + "results")
         self.assertEqual("BMI Results", driver.title, "Results page is not correct")
         print("SUCCEEDED")
         
     def test_navigates_back_to_root(self):
         print("test_navigates_back_to_root")
         driver = self.driver
-        driver.get(url + '/results')
+        driver.get(url + "results")
         again_button = driver.find_element(By.XPATH, "//button[@id='again']")
         again_button.click()
         self.assertEqual("BMI Calculator", driver.title, "Did not navigate back to home page")
