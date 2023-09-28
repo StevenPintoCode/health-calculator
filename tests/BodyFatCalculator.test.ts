@@ -11,7 +11,7 @@ describe("Testing body fat calculator", () => {
       expect(result).toBe(expectedValue.toString())
     })
 
-  test.each(caseFemale)("Testing when age is 25 and gender is female, weight: %p kg, height: %p cm, neck: %p cm, waist %p cm, hip %p cm",
+  test.each(caseFemale)("Testing when age is 25 and gender is female, weight: %p kg, height: %p cm, neck: %p cm, waist %p cm, hip %p cm, should equal %p",
     (first, second, third, fourth, fifth, expectedValue) => {
       const bodyFatCalc = new BodyFatCalculator("female", fourth, third, fifth, second)
       const result = bodyFatCalc.calculateOperation()

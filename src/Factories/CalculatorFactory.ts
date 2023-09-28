@@ -1,7 +1,7 @@
-import Calculator from "./Interfaces/Calculator";
-import BMRCalculator from "./Classes/BMRCalculator";
-import BMICalculator from "./Classes/BMICalculator";
-import BodyFatCalculator from "./Classes/BodyFatCalculator";
+import Calculator from "../Interfaces/Calculator";
+import BMRCalculator from "../Classes/BMRCalculator";
+import BMICalculator from "../Classes/BMICalculator";
+import BodyFatCalculator from "../Classes/BodyFatCalculator";
 
 export interface CalculatorParams {
   weight: number,

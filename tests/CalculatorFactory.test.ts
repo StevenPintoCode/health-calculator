@@ -1,4 +1,4 @@
-import {CalculatorFactory, CalculatorParams} from "../src/CalculatorFactory";
+import {CalculatorFactory, CalculatorParams} from "../src/Factories/CalculatorFactory";
 import BMICalculator from "../src/Classes/BMICalculator";
 import BMRCalculator from "../src/Classes/BMRCalculator";
 import BodyFatCalculator from "../src/Classes/BodyFatCalculator";

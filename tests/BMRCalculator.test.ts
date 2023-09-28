@@ -1,4 +1,4 @@
-import { CalculatorParams } from "../src/CalculatorFactory";
+import { CalculatorParams } from "../src/Factories/CalculatorFactory";
 import BMRCalculator from "../src/Classes/BMRCalculator";
 
 const casesMale = [[80, 175, 1799], [50, 130, 1218], [20, 360, 2355]]
