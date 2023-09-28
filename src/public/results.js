@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             elements[calculator].appendChild(heading);
 
             const result = document.createElement('p');
+            result.id = `${calculator}-result`;
             result.textContent = `Result: ${data.result}${data.units}`;
             elements[calculator].appendChild(result);
         })
