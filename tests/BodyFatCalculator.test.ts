@@ -18,4 +18,14 @@ describe("Testing body fat calculator", () => {
 
       expect(result).toBe(expectedValue.toString())
     })
+
+  test("input invalid arguments", () => {
+    const bodyFatCalc = new BodyFatCalculator("female", undefined, undefined, undefined, 170)
+
+    function testCalculateOperation() {
+      const result = bodyFatCalc.calculateOperation()
+    }
+
+    expect(testCalculateOperation).toThrow(new Error("Invalid argument to BodyFat calculator"))
+  })
 })

@@ -15,7 +15,7 @@ export default class BMRCalculator implements Calculator {
   }
 
   calculateOperation(): string {
-    if(this.age === undefined || this.gender === undefined){
+    if(!this.age || !this.gender){
       throw new Error("Invalid parameters for BMR calculator")
     }
     if (this.gender === 'male') {

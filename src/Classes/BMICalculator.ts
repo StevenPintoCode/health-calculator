@@ -11,7 +11,7 @@ export default class BMICalculator implements Calculator {
       this.weight = weight
       this.height = height
     }else{
-      throw Error("Invalid input arguments to BMI calculator.")
+      throw new Error("Invalid input arguments to BMI calculator.")
     }
   }
 

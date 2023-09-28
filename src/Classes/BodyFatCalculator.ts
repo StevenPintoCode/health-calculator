@@ -20,12 +20,12 @@ export default class BodyFatCalculator implements Calculator {
   calculateOperation(): string {
 
     if (this.gender === 'male') {
-      if(this.waist === undefined || this.neck === undefined){
+      if(!this.waist|| !this.neck){
         throw new Error("Invalid argument to BodyFat calculator")
       }
       return ((495 / (1.0324 - 0.19077 * Math.log10(this.waist - this.neck) + 0.15456 * Math.log10(this.height))) - 450).toFixed(1)
     } else {
-      if(this.waist === undefined || this.neck === undefined || this.hip === undefined){
+      if(!this.waist|| !this.neck || !this.hip){
         throw new Error("Invalid argument to BodyFat calculator")
       }
       return ((495 / (1.29579 - 0.35004 * Math.log10(this.waist + this.hip - this.neck) + 0.22100 * Math.log10(this.height))) - 450).toFixed(1)
