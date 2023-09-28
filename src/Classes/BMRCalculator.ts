@@ -6,7 +6,7 @@ export default class BMRCalculator implements Calculator {
   height: number
   age?: number
   gender?: string
-
+  units = "calories/day"
   constructor(weight: number, height: number, age: number | undefined, gender: string | undefined) {
     this.weight = weight
     this.height = height

@@ -4,6 +4,7 @@ export default class BMICalculator implements Calculator {
   type = 'BMI'
   weight: number
   height: number
+  units= "kg/m^2"
 
   constructor(weight: number, height: number) {
     if ( weight && height) {

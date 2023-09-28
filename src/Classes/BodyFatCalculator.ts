@@ -2,6 +2,7 @@ import Calculator from "../Interfaces/Calculator";
 
 export default class BodyFatCalculator implements Calculator {
   type: string = "Body Fat"
+  units="%"
   gender?: string
   waist: number | undefined
   neck: number | undefined
