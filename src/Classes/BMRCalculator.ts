@@ -22,6 +22,6 @@ export default class BMRCalculator implements Calculator {
       return (10 * (this.weight) + 6.25 * (this.height) - 5 * (this.age) + 5).toFixed(0)
     }
     // return (10 * (this.weight) + 6.25 * (this.height) - 5 * (this.age) - 161).toFixed(0)
-    return (10).toFixed(0);
+    return (10).toFixed(1);
   }
 }
